@@ -1,4 +1,7 @@
-# Fast Segment Builder
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![3D Slicer](https://img.shields.io/badge/3D%20Slicer-Extension-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f6197f22-481a-4ffd-8ae5-e26af2741079" width="1000"/>
