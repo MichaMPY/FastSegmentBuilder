@@ -1,0 +1,2 @@
+# Uses built-in 3D Slicer Python environment
+# No external dependencies required
