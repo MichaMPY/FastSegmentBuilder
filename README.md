@@ -1,4 +1,3 @@
-<img width="1557" height="972" alt="fastsegbild" src="https://github.com/user-attachments/assets/f6197f22-481a-4ffd-8ae5-e26af2741079" />
 # Fast Segment Builder
 
 <p align="center">
