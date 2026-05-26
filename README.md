@@ -1,33 +1,152 @@
 <img width="1557" height="972" alt="fastsegbild" src="https://github.com/user-attachments/assets/f6197f22-481a-4ffd-8ae5-e26af2741079" />
 # Fast Segment Builder
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f6197f22-481a-4ffd-8ae5-e26af2741079" width="1000"/>
+</p>
+
+---
+
+# Fast Segment Builder
+
 **Fast persistent threshold-based segmentation workflow for 3D Slicer with protected multi-segment editing.**
 
+---
+
 ## Overview
-Fast Segment Builder is a custom module for 3D Slicer designed to accelerate multi-segment thresholding. It allows independent thresholding for each segment without damaging previously created structures.
+
+Fast Segment Builder is a custom module for 3D Slicer designed to accelerate multi-segment threshold-based segmentation workflows.
+
+The module allows independent thresholding for each segment without damaging previously created structures, making it especially useful for large medical imaging datasets and research pipelines.
+
+---
+
+## Why This Module Exists
+
+Standard threshold workflows in 3D Slicer can accidentally overwrite previously created segments during multi-segment editing.
+
+Fast Segment Builder solves this problem by enforcing protected overwrite behavior and automating repetitive segmentation operations.
+
+---
 
 ## Key Features
-* **Persistent UI:** Custom buttons stay saved between Slicer sessions using QSettings.
-* **Data Integrity:** Automatically sets `OverwriteNone` mode to protect existing segments from accidental corruption.
-* **Auto-Logical Ops:** Automatically detects overlaps and performs subtractions.
-* **Research Optimized:** Built specifically for large trauma and multi-organ CT/MRI datasets.
+
+### Persistent UI
+Custom segmentation buttons are automatically saved between Slicer sessions using `QSettings`.
+
+### Protected Multi-Segment Editing
+Automatically enables `OverwriteNone` mode to prevent accidental corruption of existing segments during threshold operations.
+
+### Automatic Logical Operations
+Automatically detects overlaps between segments and performs logical subtraction operations.
+
+### Research-Oriented Workflow
+Optimized for:
+
+- Trauma CT datasets
+- Multi-organ segmentation
+- Large annotation workflows
+- Medical imaging research
+- AI dataset preparation
+
+---
 
 ## Technical Implementation
-The module ensures stable multi-segment editing by forcing the segment editor's overwrite mode:
+
+The module ensures stable multi-segment editing by enforcing protected overwrite behavior:
+
 ```python
-editNode.SetOverwriteMode(slicer.vtkMRMLSegmentEditorNode.OverwriteNone)
+editNode.SetOverwriteMode(
+    slicer.vtkMRMLSegmentEditorNode.OverwriteNone
+)
+```
+
+This prevents newly created threshold segments from overwriting existing structures.
+
+---
+
+## Built With
+
+- Python
+- Qt
+- CTK
+- VTK
+- MRML API
+- 3D Slicer Segment Editor API
+
+---
+
 ## Installation
 
-To use this module in 3D Slicer, follow these steps:
+### Load as Local Module in 3D Slicer
 
-1. **Download the code:** Click the green **Code** button and select **Download ZIP**. Unzip the archive to a folder on your computer.
-2. **Open 3D Slicer:**
-   Go to the top menu: **Edit** -> **Application Settings**.
-3. **Add the Module Path:**
-   - Select **Modules** in the left sidebar.
-   - Click the **Add** button (or the "..." next to "Additional module paths").
-   - Select the folder where you unzipped the repository (the folder containing `FastSegmentBuilder.py`).
-4. **Restart Slicer:**
-   Slicer will ask to restart. Click **Yes**.
-5. **Find the Module:**
-   Once restarted, you can find the tool in the module selector under the **Segmentation** category.
+1. Open 3D Slicer
+
+2. Go to:
+
+```text
+Edit → Application Settings → Modules
+```
+
+3. Click **Add**
+
+4. Select the folder containing:
+
+```text
+FastSegmentBuilder.py
+```
+
+5. Restart 3D Slicer
+
+6. Open the module from:
+
+```text
+Segmentation → Fast Segment Builder
+```
+
+---
+
+## Usage
+
+1. Select an input volume.
+2. Set lower and upper threshold values.
+3. Create a custom segmentation button.
+4. Click the button to generate a segment.
+5. Existing segments remain protected during editing.
+
+---
+
+## Repository Structure
+
+```text
+FastSegmentBuilder/
+│
+├── FastSegmentBuilder.py
+├── README.md
+├── LICENSE
+├── .gitignore
+├── screenshots/
+└── examples/
+```
+
+---
+
+## Recommended GitHub Topics
+
+```text
+3d-slicer
+medical-imaging
+segmentation
+vtk
+python
+dicom
+medical-ai
+radiology
+annotation-tool
+```
+
+---
+
+## License
+
+MIT License
