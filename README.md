@@ -121,7 +121,28 @@ Segmentation → Fast Segment Builder
 3. Create a custom segmentation button.
 4. Click the button to generate a segment.
 5. Existing segments remain protected during editing.
+## Interface Overview
 
+
+
+### Input Volume
+Select the CT/MRI volume used for segmentation.
+
+### Threshold Range
+Set lower and upper threshold values for the new segment.
+
+### Add Action Button
+Creates a persistent custom segmentation button using the current segment name.
+
+### Clear Saved Buttons
+Removes all saved persistent segmentation buttons from `QSettings`.
+
+### Quick Access Segmentation Buttons
+Each custom button instantly creates a new segment using the currently selected threshold values.
+
+
+
+Previously created segments remain protected during the operation.
 ---
 
 ## Repository Structure
