@@ -16,3 +16,18 @@ Fast Segment Builder is a custom module for 3D Slicer designed to accelerate mul
 The module ensures stable multi-segment editing by forcing the segment editor's overwrite mode:
 ```python
 editNode.SetOverwriteMode(slicer.vtkMRMLSegmentEditorNode.OverwriteNone)
+## Installation
+
+To use this module in 3D Slicer, follow these steps:
+
+1. **Download the code:** Click the green **Code** button and select **Download ZIP**. Unzip the archive to a folder on your computer.
+2. **Open 3D Slicer:**
+   Go to the top menu: **Edit** -> **Application Settings**.
+3. **Add the Module Path:**
+   - Select **Modules** in the left sidebar.
+   - Click the **Add** button (or the "..." next to "Additional module paths").
+   - Select the folder where you unzipped the repository (the folder containing `FastSegmentBuilder.py`).
+4. **Restart Slicer:**
+   Slicer will ask to restart. Click **Yes**.
+5. **Find the Module:**
+   Once restarted, you can find the tool in the module selector under the **Segmentation** category.
