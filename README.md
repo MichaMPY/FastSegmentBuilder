@@ -80,32 +80,38 @@ This prevents newly created threshold segments from overwriting existing structu
 
 ## Installation
 
-### Load as Local Module in 3D Slicer
+### Install as Local Module in 3D Slicer
 
-1. Open 3D Slicer
+1. Download this repository:
+   - Click the green **Code** button
+   - Select **Download ZIP**
+   - Extract the archive to any folder on your computer
 
-2. Go to:
+2. Open 3D Slicer
+
+3. Go to:
 
 ```text
 Edit → Application Settings → Modules
 ```
 
-3. Click **Add**
-
-4. Select the folder containing:
+4. In the **Additional module paths** section:
+   - Click **Add**
+   - Select the folder containing:
 
 ```text
 FastSegmentBuilder.py
 ```
 
-5. Restart 3D Slicer
+5. Click **OK**
 
-6. Open the module from:
+6. Restart 3D Slicer
+
+7. Open the module from:
 
 ```text
 Segmentation → Fast Segment Builder
 ```
-
 ---
 
 ## Usage
