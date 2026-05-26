@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Medical data & Slicer specific
+*.nrrd
+*.nii
+*.nii.gz
+*.mrml
+*.dcm
+DICOM/
+*.log
