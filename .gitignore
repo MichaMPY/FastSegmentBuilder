@@ -218,9 +218,18 @@ __marimo__/
 .streamlit/secrets.toml
 # Medical data & Slicer specific
 *.nrrd
+*.seg.nrrd
 *.nii
 *.nii.gz
 *.mrml
+*.mrb
 *.dcm
 DICOM/
-*.log
+
+# Slicer build folders
+Slicer-build/
+Slicer-install/
+
+# OS files
+.DS_Store
+Thumbs.db
