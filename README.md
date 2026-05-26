@@ -1,2 +1,17 @@
-# FastSegmentBuilder
-Persistent &amp; protected multi-segment thresholding for 3D Slicer. Automates logical subtractions, prevents segment corruption, and saves custom buttons between sessions.
+# Fast Segment Builder
+
+**Fast persistent threshold-based segmentation workflow for 3D Slicer with protected multi-segment editing.**
+
+## Overview
+Fast Segment Builder is a custom module for 3D Slicer designed to accelerate multi-segment thresholding. It allows independent thresholding for each segment without damaging previously created structures.
+
+## Key Features
+* **Persistent UI:** Custom buttons stay saved between Slicer sessions using QSettings.
+* **Data Integrity:** Automatically sets `OverwriteNone` mode to protect existing segments from accidental corruption.
+* **Auto-Logical Ops:** Automatically detects overlaps and performs subtractions.
+* **Research Optimized:** Built specifically for large trauma and multi-organ CT/MRI datasets.
+
+## Technical Implementation
+The module ensures stable multi-segment editing by forcing the segment editor's overwrite mode:
+```python
+editNode.SetOverwriteMode(slicer.vtkMRMLSegmentEditorNode.OverwriteNone)
